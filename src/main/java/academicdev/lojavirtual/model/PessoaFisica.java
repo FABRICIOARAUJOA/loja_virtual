@@ -1,7 +1,6 @@
 package academicdev.lojavirtual.model;
 
 import java.util.Date;
-import java.util.Objects;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -15,12 +14,11 @@ import jakarta.persistence.TemporalType;
 @PrimaryKeyJoinColumn(name = "id")
 public class PessoaFisica extends Pessoa {
 
-
 	private static final long serialVersionUID = 1L;
-	
+
 	@Column(nullable = false)
 	private String cpf;
-	
+
 	@Temporal(TemporalType.DATE)
 	private Date dataNascimento;
 
@@ -39,9 +37,5 @@ public class PessoaFisica extends Pessoa {
 	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
 	}
-
-	
-	
-	
 
 }
